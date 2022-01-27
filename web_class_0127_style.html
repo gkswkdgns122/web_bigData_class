@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External style 위치 -->
+    <link rel="stylesheet" href="web_class_0127_style.css">
+    
+    <title>css 기본기</title>
+    <!-- Internal style 위치 -->
+    <style>
+        body{
+            color:blueviolet;
+        }
+        li{
+            color:cadetblue;
+        }   
+        li.black.color{
+            color:black;
+        }
+        .black{
+            color:blue;
+        }
+        .quotes:before,.quotes:after{
+            content: '"';
+        }
+        /* #hoverColorRed:hover{
+            color:red;
+        }  */
+    </style>
+</head>
+
+<body>
+    <h1>css 개념을 이해하고 사용해 보자</h1>
+    <script>
+        //console객체: 브라우저의 콘솔창을 객체로 참조
+        //console.log(""): 파라미터의 내용을 출력하는 함수
+        var a = document.getElementById("hoverColorRed");
+        console.log(a);
+    </script>
+    <ul>
+        <li class="black"><span class="quotes">External style</span>:</li>
+        <li class="black color">Internal style:</li>
+        <li id="hoverColorRed" class="black color">Inline style:</li>
+        <li>Cascading:</li>
+    </ul>
+    <script>
+        //#hoverColorRed를 마우스 올렸을 때 color:red만든다.
+        //script는 #hoverColorRed보다 아래에 작성한다.
+
+        var b = document.getElementById("hoverColorRed");
+        console.log(b);
+        b.onmouseenter = function(){
+            b.style.color = "red";
+            //inline style을 적용
+        }
+        b.onmouseout = function(){
+            this.style.color = "";
+        }
+        //enter-out <-> over-leave
+    </script>
+</body>
+</html>
