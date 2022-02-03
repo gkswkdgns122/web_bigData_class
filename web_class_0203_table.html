@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        table#table1{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        /* tr은 작동하지 않음 */
+        table#table1 tr{
+            border: 1px solid red;
+        }
+        table#table1 td, 
+        table#table1 th{
+            border-top: 1px solid purple;
+            border-left: 1px solid purple;
+            border-right: 1px solid cornflowerblue;
+            border-bottom: 1px solid cornflowerblue;
+        }
+        table.stripe{
+            border-collapse: collapse ;
+            border-top: 1px solid;
+            width: 100%;
+        }
+        table.stripe td,
+         table.stripe th{
+            border-bottom: 1px solid;
+            padding: 5px;
+        }
+        /* 홀수번째 색칠 */
+        table.stripe tr:nth-child(2n-1) td{
+            background-color:wheat;
+        }
+        table.stripe thead th{
+            background-color: darkgray;
+            color: white;
+        }
+        /* 점수가 더 낮아서 ntr-child의 데이터엔 적용안됌, tr추가하면 가능 */
+        table.stripe tr:hover td{
+            background-color:rgb(223, 218, 208);
+        }
+        /* 마우스 누루고 있으면 색 변함 */
+        table.stripe tr:active td{
+            background-color:rgb(74, 58, 25);
+        }
+    </style>
+    <title>HTML table로 표생성</title>
+</head>
+<body>
+    <h1>HTML table로 표를 생성해보자.</h1>
+    <h2>사원정보</h2>
+    <table border="1" style="width:100%">
+        <caption>사원리스트</caption>
+        <colgroup>
+            <col span="1">
+            <col span="2" style="background-color:tomato;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>사번(대표)</th>
+                <th style="width: calc(100%/6);">이름</th>
+                <th>생일</th>
+                <th>월급</th>
+                <th>직책</th>
+                <th>부서</th>
+            </tr>
+        </thead>
+        <tbody>     
+            <tr>
+                <td>e1234</td>
+                <td>제인</td>
+                <td>1990-01-20</td>
+                <td>350</td>
+                <td>과장</td>
+                <td>세일즈</td>
+            </tr>
+            <!-- 구분할 기본키값이 없음(사번 만들어줘서 구분) -->
+            <tr>
+                <td>s3286</td>
+                <td>제인</td>
+                <td>1990-01-20</td>
+                <td>350</td>
+                <td>과장</td>
+                <td>세일즈</td>
+            </tr>
+            <tr>
+                <td>a5451</td>
+                <td>마이클</td>
+                <td>1880-05-20</td>
+                <td>250</td>
+                <td>대리</td>
+                <td>세일즈</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <table id="table1">
+        <caption>사원리스트</caption>
+        <thead>
+            <tr>
+                <th>사번(대표)</th>
+                <th style="width: calc(100%/6);">이름</th>
+                <th>생일</th>
+                <th>월급</th>
+                <th>직책</th>
+                <th>부서</th>
+            </tr>
+        </thead>
+        <tbody>     
+            <tr>
+                <td>e1234</td>
+                <td>제인</td>
+                <td>1990-01-20</td>
+                <td>350</td>
+                <td>과장</td>
+                <td>세일즈</td>
+            </tr>
+            <!-- 구분할 기본키값이 없음(사번 만들어줘서 구분) -->
+            <tr>
+                <td>s3286</td>
+                <td>제인</td>
+                <td>1990-01-20</td>
+                <td>350</td>
+                <td>과장</td>
+                <td>세일즈</td>
+            </tr>
+            <tr>
+                <td>a5451</td>
+                <td>마이클</td>
+                <td>1880-05-20</td>
+                <td>250</td>
+                <td>대리</td>
+                <td>세일즈</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <table class="stripe">
+        <caption>사원리스트</caption>
+        <thead>
+            <tr>
+                <th>사번(대표)</th>
+                <th style="width: calc(100%/6);">이름</th>
+                <th>생일</th>
+                <th>월급</th>
+                <th>직책</th>
+                <th>부서</th>
+            </tr>
+        </thead>
+        <tbody>     
+            <tr>
+                <td>e1234</td>
+                <td>제인</td>
+                <td>1990-01-20</td>
+                <td>350</td>
+                <td>과장</td>
+                <td>세일즈</td>
+            </tr>
+            <!-- 구분할 기본키값이 없음(사번 만들어줘서 구분) -->
+            <tr>
+                <td>s3286</td>
+                <td>제인</td>
+                <td>1990-01-20</td>
+                <td>350</td>
+                <td>과장</td>
+                <td>세일즈</td>
+            </tr>
+            <tr>
+                <td>a5451</td>
+                <td>마이클</td>
+                <td>1880-05-20</td>
+                <td>250</td>
+                <td>대리</td>
+                <td>세일즈</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 onclick="this.style.color='red'"
+    onmousedown="this.style.color='black'">onclick=> color:red</h2>
+</body>
+</html>

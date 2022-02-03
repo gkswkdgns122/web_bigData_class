@@ -50,6 +50,32 @@
             음악:<input type="checkbox" name="hobby" value="음악">
         </p>
         <p>
+            <label>
+                자기소개
+                &nbsp;:<br>    <!--enter는 한칸의 공백으로 인식, &nbsp;공백-->
+                <textarea maxlength="100" 
+                name="info" id="" cols="30" rows="3" style="resize:none">
+안녕하세요.
+빅데이터 수업입니다.
+                </textarea>
+            </label>
+        </p>
+        <p>
+            <label>이메일
+                <input type="email" list="email_list">
+                <datalist id="email_list">
+                    <option value="@naver.com"></option>
+                    <option value="@gamil.com"></option>
+                    <option value="@daum.com"></option>
+                </datalist>
+            </label>
+        </p>
+        <p>
+            <label>생일
+                <input type="date" value="2002-01-01" name="" id="">
+            </label>
+        </p>
+        <p>
             <input type="reset" value="초기화">
             <input type="submit" value="회원가입">
         </p>

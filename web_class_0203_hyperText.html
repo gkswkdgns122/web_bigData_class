@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        a.btn{
+            display: inline-block;
+            border: 1px solid gray;
+            background-color: rgb(223, 223, 223);
+            padding: 3px 7px;
+            text-decoration: none;
+            color:black;
+            cursor: default;
+        }
+        a.btn:hover{
+            border-color: blue;
+            background-color: red;
+        }
+        /* a.btn:link, a.btn:visited, a.btn:active{
+            color:black;
+        } */
+    </style>
+    <title>HyperText인 a element</title>
+</head>
+<body>
+    <h1>HyperText인 a(achor) 요소를 사용하자</h1>
+    <p>
+        <a href="https://naver.com">네이버</a>
+    </p>
+    <p>
+        <a href="https://daum.net">다음</a>
+    </p>
+    <p>
+        <a href="https://daum.net" target="blank">
+            <img src="/daum_logo.png" alt="다음로고" width="100">
+        </a>
+    </p>
+    <p>
+        권장하지 않음..(a태그로 검색엔진 최적화하기 때문)
+        <br>차라리 a태그를 버튼처럼 바꾸길 권장
+        <input type="button" onclick="window.location.href='https://daum.net'"
+         width="100" value="다음"></button>
+    </p>
+    <p>
+        a태그를 버튼으로 스타일링<br>
+        <a class="btn" href="https://daum.net">다음</a>
+    </p>
+    <nav>
+        <h2>html수업 네비게이션</h2>
+        <a href="/web_class_0203_table.html">table</a>
+        <a href="/web_class_0128_form.html">form</a>
+        <a href="#mark">#mark</a>
+        <a href="javascript:alert('경고')">alert("경고")</a>
+    </nav>
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <h3 id="mark">mark</h3>
+</body>
+</html>
