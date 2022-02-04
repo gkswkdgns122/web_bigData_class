@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img 태그사용</title>
+</head>
+<body>
+    <h1>img 태그로 이미지를 참조하고 출력하자</h1>
+    <p>img넓이와 높이는 원본의 크기에 맞춰 지정된다.</p>
+    <div>
+        <img src="/img/car/자동차1.jpg" alt="자동차1"
+        width="200px" height="100px">
+    </div>
+    <div>
+        <img src="/img/car/자동차1.jpg" alt="자동차1"
+        width="200px">
+    </div>
+    <div>
+        <img src="/img/car/자동차1.jpg" alt="자동차1"
+        height="100px" style="border-radius: 50%; border: 1px solid; 
+        padding: 10px; background-color:red">
+    </div>
+    <div>
+        <img src="/img/car/자동차2.jpg" alt="자동차2"
+        width="200px">
+    </div>
+    <div>
+        <figure>
+            <caption>object-fit:contain</caption>
+            <img src="/img/car/자동차3.jpg" alt="자동차3"
+            style="width: 200px; height:400px; border: 1px solid red;
+            object-fit:contain;">
+        </figure>
+    </div>
+    <div>
+        <figure>
+            <caption>object-fit:fill(default)</caption>
+            <img src="/img/car/자동차3.jpg" alt="자동차3"
+            style="width: 200px; height:400px; border: 1px solid red;
+            object-fit:fill;">
+        </figure>
+    </div>
+    <div>
+        <figure>
+            <caption>object-fit:cover1</caption>
+            <img src="/img/car/자동차3.jpg" alt="자동차3"
+            style="width: 200px; height:400px; border: 1px solid red;
+            object-fit:cover;">
+        </figure>
+    </div>
+    <div>
+        <figure>
+            <caption>object-fit:cover2</caption>
+            <img src="/img/car/자동차3.jpg" alt="자동차3"
+            style="width: 500px; height:200px; border: 1px solid red;
+            object-fit:cover;">
+        </figure>
+    </div>
+    <div>
+        <figure>
+            <caption>object-fit:none</caption>
+            <img src="/img/car/자동차3.jpg" alt="자동차3"
+            style="width: 200px; height:400px; border: 1px solid red;
+            object-fit:none;">
+        </figure>
+    </div>
+    <hr>
+    <div>
+        <h2>box-reflect</h2>
+        <img src="/img/car/자동차1.jpg" alt="자동차반사" width="200"
+        style="-webkit-box-reflect: below;">
+    </div>
+    <div>
+        <h2>box-reflect</h2>
+        <img src="/img/car/자동차1.jpg" alt="자동차반사" width="200"
+        style="-webkit-box-reflect: right;">
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe실습</title>
+</head>
+<body>
+    <h1>iframe으로 웹페이지(document) 안에 다른 웹페이지를 추가하자</h1>
+    <iframe src="/html/web_class_0125.html"></iframe>
+    <iframe src="https://w3shools.com"></iframe>
+    <!-- 서버공격 방지위해 iframe으로 불러오는걸 거부 -->
+    <iframe src="https://naver.com"></iframe>
+    <hr>
+    <iframe src="/html/web_class_0126_attributes.html"
+    style="width:100%; height:100vh;" name="iframe1"></iframe>
+    <a href="/html/web_class_0126_globalAttributes.html" target="iframe1">
+        글로벌 수업링크</a>
+    <a href="/html/web_class_0126_attributes2.html" target="iframe1">
+        글로벌 수업링크</a>    
+    <br><br><br><br>
+</body>
+</html>
