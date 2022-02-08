@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+   
+    <style>
+        header{
+            background-color: rgb(56, 56, 76);
+            color:white;
+            padding: 1px;
+        }
+        nav li{
+            display: inline-block;
+            width: 200px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        nav a{
+            color:white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav ul{
+            padding: 0;
+            margin: 0;
+        }
+        nav a:hover{
+            color:rgb(5, 22, 16);
+            background-color:antiquewhite;
+        }
+        .dropdown_menu{
+            position:absolute;
+            background-color: rgb(104, 128, 149);
+            width: 200px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 200ms;
+        }
+        .dropdown_menu li, .dropdown_menu a{
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .dropdown_menu li{
+            padding: 12px 20px;
+        }
+        .menu>li:hover .dropdown_menu{
+            max-height: 300px;
+        }
+
+        .dropdown_button_container .ex{
+            transition: all 2000ms;
+            list-style-type: none;
+        }
+        .ex a{
+            display: inline-block;
+            width: 150px;
+            text-decoration: none;
+            color: black;
+            border: 1px solid;
+            text-align: center;
+        }
+        .dropdown_btn_hidden + .ex{
+            display: none;
+        }
+        .dropdown_btn_slide-x + .ex{
+            width: 0px;
+            overflow: hidden;
+        }
+        .dropdown_btn_slide-y + .ex{
+            max-height:0px;
+            overflow: hidden;
+        }
+        .dropdown_btn_hidden:hover + .ex{
+            display: block;
+        }
+        .dropdown_btn_slide-x:hover + .ex{
+            width: 155px;
+        }
+        .dropdown_btn_slide-y:hover + .ex{
+            max-height:150px;
+        }
+    </style>
+    <title>nav+dropdown_menu</title>
+</head>
+<body>
+    <header>          
+            <h1>HOME</h1>
+        <nav>
+            <ul class="menu">
+                <!-- (a[href="#"]>li{메뉴$$})*5     -->
+                <li>
+                    <a href="#">메뉴01</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="#">소메뉴1</a></li>
+                        <li><a href="#">소메뉴2</a></li>
+                        <li><a href="#">소메뉴3</a></li>
+                        <li><a href="#">소메뉴4</a></li>
+                        <li><a href="#">소메뉴5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴02</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="#">소메뉴1</a></li>
+                        <li><a href="#">소메뉴2</a></li>
+                        <li><a href="#">소메뉴3</a></li>
+                        <li><a href="#">소메뉴4</a></li>
+                        <li><a href="#">소메뉴5</a></li>
+                    </ul></li>
+                <li><a href="#">메뉴03</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="#">소메뉴1</a></li>
+                        <li><a href="#">소메뉴2</a></li>
+                        <li><a href="#">소메뉴3</a></li>
+                        <li><a href="#">소메뉴4</a></li>
+                        <li><a href="#">소메뉴5</a></li>
+                    </ul></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>dropdown_button(display:none)</h2>
+            <div class="dropdown_button_container">
+                <button  class="dropdown_btn_hidden">드롭다운</button>
+                <ul class="ex">
+                    <li><a href="">메뉴</a></li>
+                    <li><a href="">메뉴</a></li>
+                    <li><a href="">메뉴</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>dropdown_button(max_width:0)</h2>
+            <div class="dropdown_button_container">
+                <button  class="dropdown_btn_slide-x">드롭다운</button>
+                <ul class="ex">
+                    <li><a href="">메뉴</a></li>
+                    <li><a href="">메뉴</a></li>
+                    <li><a href="">메뉴</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>dropdown_button(max_height:0)</h2>
+            <div class="dropdown_button_container">
+                <button class="dropdown_btn_slide-y">드롭다운</button>
+                <ul class="ex">
+                    <li><a href="">메뉴</a></li>
+                    <li><a href="">메뉴</a></li>
+                    <li><a href="">메뉴</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <br><br><br><br><br><br><br>
+</body>
+</html>
